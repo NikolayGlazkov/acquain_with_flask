@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новости</title>
+    <style>
+        .news-block {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Блоки новостей</h1>
+    {% for news_item in newss %}
+        <div class="news-block">
+            <h2>{{ news_item.title }}</h2>
+            <p>{{ news_item.text }}</p>
+            <p><strong>Дата публикации:</strong> {{ news_item.date }}</p>
+            <p><strong>Издатель:</strong> {{ news_item.izdat }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
