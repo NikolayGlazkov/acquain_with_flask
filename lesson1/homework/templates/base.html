@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}
+            {% endblock %}</title>
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li><a href="/">Главная</a></li>
+                <li><a href="/cloth">Одежда</a></li>
+                <li><a href="/shoes">Обувь</a></li>
+                <li><a href="/jackets">Куртки</a></li>
+            </ul>
+        </header>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer>
+            <p>
+                (c) 2023-2024
+            </p>
+        </footer>
+    </body>
+</html>
