@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Приветствие{% endblock %}
+
+{% block content %}
+    <h1>Форма для Имени</h1>
+    <form method="POST" action="/namehello">
+        <div>
+            <label for="name">Введите свое имя:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div>
+            <button type="submit">Отправить</button>
+        </div>
+    </form>
+{% endblock %}

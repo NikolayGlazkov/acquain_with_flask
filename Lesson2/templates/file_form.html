@@ -1,0 +1,14 @@
+
+{% extends "base.html" %}
+{% block title %}Upload{% endblock %}
+
+{% block content %}
+<h1>загрузка изобрадений</h1>
+<form>
+    <div>
+        <label for="image">Изображение</label>
+        <input type="file">
+    </div>
+    <button type="submit">загрузить</button>
+</form>
+Привет, {{ name }}{% endblock %}

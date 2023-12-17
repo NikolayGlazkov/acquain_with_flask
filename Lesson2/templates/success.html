@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}Success{% endblock %}
+
+{% block content %}
+<p>Количество слов в тексте: {{ text_input.split()|length }}</p>
+{% endblock %}
