@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Форма для ввода чисел{% endblock %}
+
+{% block content %}
+    <h1>Форма для ввода двух чисел</h1>
+    <form method="POST" action="/calculate">
+        <div>
+            <label for="num1">Введите первое число:</label>
+            <input type="number" id="num1" name="num1" required>
+        </div>
+        <div>
+            <label for="num2">Введите второе число:</label>
+            <input type="number" id="num2" name="num2" required>
+        </div>
+        <div>
+            <label for="operation">Выберите операцию:</label>
+            <select id="operation" name="operation" required>
+                <option value="add">Сложение</option>
+                <option value="subtract">Вычитание</option>
+                <option value="multiplication">Умножение</option>
+                <option value="division">Деление</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit">Отправить</button>
+        </div>
+    </form>
+{% endblock %}

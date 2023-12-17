@@ -1,0 +1,11 @@
+{% block content %}
+    {% if num is defined %}
+        <p>Вы ввели: {{ num }}</p>
+        <p>Квадрат числа: {{ result }}</p>
+        <form method="get" action="{{ url_for('index') }}">
+            <button type="submit">Вернуться</button>
+        </form>
+    {% else %}
+        <p>{{ message }}</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Форма для Ввода Возраста и Имени{% endblock %}
+
+{% block content %}
+    <h1>Форма для Ввода Возраста и Имени</h1>
+    <form method="POST" action="/authentication">
+        <div>
+            <label for="age">Введите свой возраст:</label>
+            <input type="number" id="age" name="age" required>
+        </div>
+        <div>
+            <label for="name">Введите свое имя:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div>
+            <button type="submit">Отправить</button>
+        </div>
+    </form>
+{% endblock %}

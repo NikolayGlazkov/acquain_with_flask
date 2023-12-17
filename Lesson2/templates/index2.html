@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Форма ввода данных{% endblock %}
+
+{% block content %}
+    <h1>Форма ввода данных</h1>
+    <form action="/welcome" method="post">
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="email">Электронная почта:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <input type="submit" value="Отправить">
+    </form>
+{% endblock %}

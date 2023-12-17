@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Text Form{% endblock %}
+
+{% block content %}
+    <h1>Форма ввода текста</h1>
+    <form method="POST" action="/">
+        <div>
+            <label for="text_input">Введите текст:</label>
+            <textarea id="text_input" name="text_input" rows="4" cols="50" required></textarea>
+        </div>
+        <div>
+            <button type="submit">Отправить</button>
+        </div>
+    </form>
+{% endblock %}
