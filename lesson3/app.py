@@ -11,6 +11,7 @@ from random import choice
 from flask import Flask,render_template
 from flask_sqlalchemy import SQLAlchemy
 from models import Student, Faculties, db
+import pandas as pd
 genders = ["m", "f"]
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///test.db"
@@ -46,7 +47,16 @@ def fill_tanles():
        
     # db.session.commit()
     # print("ol user whos update to db")
+@app.route("/")
+def index():
+    students = Student.query.all()
+    # my_list = []
+    # for student in students:
+    #     my_list.append(student)
 
+    # return render_template("index.html")
+    content = pd.DataFrame(students).to_html()
+    return render_template("index.html", table=content)
 
 if __name__ == "__main__":
     app.run(debug=True)
